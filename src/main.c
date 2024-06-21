@@ -10,10 +10,31 @@ int main(){
     int y = 4;
 
     char g = getch();
-    if (g == 'e'){
+
+    while (g != 'e'){
         draw(x, y);
-    }else{
-        printf("nahui idi");
+        g = getch();
+        if(g == 'w'){
+            if(y != 0){
+                y--;
+            }
+        }
+        if(g == 's'){
+            if(y != ky){
+                y++;
+            }
+        }
+        if(g == 'a'){
+            if(x != 0){
+                x--;
+            }
+        }
+        if(g == 'd'){
+            if(x != kx){
+                x++;
+            }
+        }
+        system("cls");
     }
 
     //draw(x, y);
